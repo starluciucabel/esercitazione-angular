@@ -9,11 +9,15 @@ import { Component, Input, Output , EventEmitter} from '@angular/core';
 })
 export class ButtonComponent {
   @Input({required:true}) title!: string
+  @Input() isSecondary: boolean = false;
   @Output() buttonClicked = new EventEmitter<void>();
 
+get btnStyle() {
+  return this.isSecondary ? 'btn-secondary' : 'btn-primary';
+}
+
   onButtonClicked(){
-    console.log(this.buttonClicked)
-    this.buttonClicked.emit;
+    this.buttonClicked.emit();
   }
 
 
