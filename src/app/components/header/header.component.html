@@ -1,0 +1,5 @@
+<header class="d-flex justify-content-start">
+    <img [src]=imagePath alt="PopCorn">
+    <nav><a href="">Profilo</a></nav>
+    <app-button (btnClicked)="onUserClick()" [title]="this.isClicked ? 'Ciao abel':'Login'" />
+</header>

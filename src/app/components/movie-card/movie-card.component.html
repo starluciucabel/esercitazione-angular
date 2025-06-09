@@ -1,0 +1,9 @@
+<div [id]="movie.id">
+  <img [src]="posterPath" [alt]="posterAlt" />
+  <h3>{{ movie.title }}</h3>
+  @if (movie.overview){
+    <p>{{movie.overview}}</p>
+  }
+  
+  <app-popcorn-rating [rating]="movie.vote_average" />
+</div>
