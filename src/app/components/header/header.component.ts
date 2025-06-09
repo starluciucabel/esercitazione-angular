@@ -21,6 +21,9 @@ export class HeaderComponent {
   }
 
   onUserClick() {
+    this.UserAuthService.isLoggedinIn
+    ? this.UserAuthService.logout()
+    : this.UserAuthService.login()
     this.isClicked = !this.isClicked;
   }
 }
