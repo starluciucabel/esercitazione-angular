@@ -1,11 +1,19 @@
-// import { Injectable } from '@angular/core';
-// import{User} from 
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class UserAuthService {
+import { TestBed } from '@angular/core/testing';
 
-//   isLoggedinIn = false
-//   user: User | null = null
-// }
+import { UserAuthService } from './user-auth.service';
+
+describe('UserAuthService', () => {
+  let service: UserAuthService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(UserAuthService);
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});
+export { UserAuthService };
+

@@ -1,5 +1,5 @@
 <header class="container d-flex justify-content-between bg-primary">
     <img [src]=imagePath alt="PopCorn">
     <nav><a class="btn btn-light text-dark" routerLink="account" routerLinkActive="router-link-active">Profilo</a>
-    <app-button (btnClicked)="onUserClick()" [title]="this.isClicked ? 'Ciao abel':'Login'" /></nav>
+    <app-button (btnClicked)="onClick()" [title]="this.clicked ? 'Ciao abel':'Login'" /></nav>
 </header>

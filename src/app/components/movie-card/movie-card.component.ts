@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
-import {Movie } from '../../models/movie.models';
 import { PopcornRatingComponent } from '../popcorn-rating/popcorn-rating.component';
+import { Movie } from '../../models/movie.models';
+
+
 
 @Component({
   selector: 'app-movie-card',
@@ -10,15 +12,11 @@ import { PopcornRatingComponent } from '../popcorn-rating/popcorn-rating.compone
   styleUrl: './movie-card.component.scss'
 })
 export class MovieCardComponent {
-
-  @Input({required: true}) movie!: Movie;
-
-  get posterPath(){
-    return 'https://image.tmdb.org/t/p/w500/' + this.movie.poster_path;
+  @Input({required: true}) movie!: Movie
+  get posterPath() {
+    return 'https://image.tmdb.org/t/p/w500/' + this.movie.poster_path
   }
-
-   get posterAlt(){
-    return 'poster di ' + this.movie.title;
+  get posterAlt() {
+    return 'Poster di ' + this.movie.title
   }
-
 }

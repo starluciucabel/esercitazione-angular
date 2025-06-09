@@ -10,20 +10,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
- 
-  isClicked = false;
+  clicked = false
   logo = "Logo.svg";
- 
-  get imagePath(){
-
-    return 'assets/' + this.logo;
-
-  }
-
-  onUserClick() {
-    this.UserAuthService.isLoggedinIn
-    ? this.UserAuthService.logout()
-    : this.UserAuthService.login()
-    this.isClicked = !this.isClicked;
+  get imagePath() {
+    return 'assets/' + this.logo
+  };
+   
+  onClick() {
+    this.clicked = !this.clicked
   }
 }

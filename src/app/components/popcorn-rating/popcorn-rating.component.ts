@@ -1,7 +1,4 @@
-import { Component, Input} from '@angular/core';
-import { Movie } from '../../models/movie.models';
-import { MovieCardComponent } from '../movie-card/movie-card.component';
-
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-popcorn-rating',
@@ -11,13 +8,8 @@ import { MovieCardComponent } from '../movie-card/movie-card.component';
   styleUrl: './popcorn-rating.component.scss'
 })
 export class PopcornRatingComponent {
-
-  @Input() rating?: number | null;
-
-  get ratingWidth(){
-
-    return this.rating ? this.rating *10 + '%' : 0;
+  @Input() rating!: number | null //union type
+  get ratingWidth() {
+    return this.rating ? this.rating * 10 + '%': '0'
   }
-
-
 }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { DUMMY_MOVIES } from '../../data/dummy-movies'
-import { ButtonComponent } from "../button/button.component";
+import { ButtonComponent } from '../button/button.component'
 
 const randomIdx = Math.floor(Math.random() * DUMMY_MOVIES.length)
 
@@ -19,6 +19,13 @@ export class RandomMovieComponent {
     const randomIdx = Math.floor(Math.random() * DUMMY_MOVIES.length)
     console.log(randomIdx)
     this.movie = DUMMY_MOVIES[randomIdx] 
+  }
+
+  get posterPath() {
+    return 'https://image.tmdb.org/t/p/w500/' + this.movie.poster_path
+  }
+  get posterAlt() {
+    return 'Poster di ' + this.movie.title
   }
 
 }
