@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Movie } from '../../models/movie.models';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 
