@@ -1,29 +1,21 @@
-.text-truncate-multiline {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  line-height: 1.5;
-  max-height: 7.5em;
-}
-
-/* Responsive con solo media queries Bootstrap */
-@media (max-width: 575.98px) {
-  .card {
-    max-width: 20rem !important;
+.card {
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    
+    // Per allineare i bottoni diversamente:
+    // justify-content: space-between; // distanziati
+    // justify-content: flex-start; // a sinistra
+    // justify-content: flex-end; // a destra
   }
   
-  .card img {
-    height: 350px !important;
-  }
-  
-  .card-title {
-    font-size: 1.25rem !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .card {
-    max-width: 32rem !important;
+  // Responsive per mobile
+  @media (max-width: 576px) {
+    .button-container {
+      flex-direction: column;
+      gap: 8px;
+    }
   }
 }
